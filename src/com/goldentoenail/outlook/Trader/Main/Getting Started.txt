@@ -1,0 +1,13 @@
+https://www.spigotmc.org/threads/how-to-sqlite.56847/
+
+I'm having a problem.
+I have assembled the code as recommended and Eclipse is reporting an error on...
+
+  public Database getDatabase() {
+  return this.db;
+  }
+
+Error = The return type is incompatible with JavaPlugin.getDatabase()
+
+Eclipse wants me to change 'Database' to 'EbeanServer' which results in another error on the return as the type is wrong.
+

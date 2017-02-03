@@ -1,0 +1,4 @@
+name: TradeFloor
+version: 0.0.01
+author: Goldentoenail
+main: com.goldentoenail.outlook.Trader.Main.TradeFloor
