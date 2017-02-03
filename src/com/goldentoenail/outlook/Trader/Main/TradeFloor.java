@@ -1,6 +1,8 @@
 package com.goldentoenail.outlook.Trader.Main;
 
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,7 +16,6 @@ public class TradeFloor extends JavaPlugin implements Listener {
     
 	public void onEnable() {
 		final TradeFloor plugin = this;
-		getServer().getPluginManager().registerEvents((Listener)this, (Plugin)this);
 		this.db = new SQLite(this);
         this.db.load();
         
@@ -34,4 +35,11 @@ public class TradeFloor extends JavaPlugin implements Listener {
         return db;
     }
 
+	@EventHandler
+	public void onJoin(PlayerJoinEvent event) {
+		for (int i = 1; i < 64; i++) {
+			event.getPlayer().sendMessage("");
+		}
+	}
+	
 }
